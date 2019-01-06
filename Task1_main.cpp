@@ -1,7 +1,7 @@
 /**
 * @file Task1_main.cpp
 *
-* @brief This code implements inheritance (Task/Example1).
+* @brief This code implements inheritance (Task/Example2).
 *
 * @author Saif Ullah Ijaz
 *
@@ -31,7 +31,11 @@ void main() {
 		s2.HeldExam();
 	}
 
-	cout << "Student 1: " << endl << "Name: " << s1.GetName() << endl;
+	cout << "Student 1: " << endl << "Name: " << s1.GetPerson().GetName() << endl;
+	cout << "Age: " << s1.GetPerson().GetAge() << endl;
+	cout << "Gender: " << s1.GetPerson().GetGender() << endl;
+	cout << "Program: " << s1.GetStudent().GetProgram() << endl;
+	cout << "Studey Year: " << s1.GetStudent().GetStudyYear() << endl;
 	s1.Eat();
 	s1.Walk();
 	s1.Study();
