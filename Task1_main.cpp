@@ -1,7 +1,7 @@
 /**
 * @file Task1_main.cpp
 *
-* @brief This code implements inheritance (Task/Example2).
+* @brief This code implements inheritance (Task/Example1).
 *
 * @author Saif Ullah Ijaz
 *
