@@ -67,7 +67,8 @@ void Circle::SetCircle(float aRadius) {
 
 // overloaded function that sets the Circle
 void Circle::SetCircle(const Circle& aCircle) {
-	this->SetCircle(aCircle.GetColor(), aCircle.GetCoord(), aCircle.GetRadius());
+	this->SetShape(aCircle.GetShape());
+	this->SetCircle(aCircle.GetRadius());
 }
 // end function SetCircle
 
