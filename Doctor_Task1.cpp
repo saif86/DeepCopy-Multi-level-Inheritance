@@ -88,7 +88,8 @@ void Doctor::SetDoctor(int aSalary) {
 
 // overloaded function that sets the Doctor
 void Doctor::SetDoctor(const Doctor& aDoctor) {
-	this->SetDoctor(aDoctor.GetName(), aDoctor.GetAge(), aDoctor.GetGender(), aDoctor.GetSalary());
+	this->SetPerson(aDoctor.GetPerson());
+	this->SetDoctor(aDoctor.GetSalary());
 }
 // end function SetDoctor
 
