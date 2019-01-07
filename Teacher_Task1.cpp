@@ -88,7 +88,8 @@ void Teacher::SetTeacher(int aSalary) {
 
 // overloaded function that sets the Teacher
 void Teacher::SetTeacher(const Teacher& aTeacher) {
-	this->SetTeacher(aTeacher.GetName(), aTeacher.GetAge(), aTeacher.GetGender(), aTeacher.GetSalary());
+	this->SetPerson(aTeacher.GetPerson());
+	this->SetTeacher(aTeacher.GetSalary());
 }
 // end function SetTeacher
 
