@@ -64,7 +64,8 @@ void Triangle::SetTriangle(float aAngle) {
 
 // overloaded function that sets the Triangle
 void Triangle::SetTriangle(const Triangle& aTriangle) {
-	this->SetTriangle(aTriangle.GetColor(), aTriangle.GetCoord(), aTriangle.GetAngle());
+	this->SetShape(aTriangle.GetShape());
+	this->SetTriangle(aTriangle.GetAngle());
 }
 // end function SetTriangle
 
