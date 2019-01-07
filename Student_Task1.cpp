@@ -18,7 +18,7 @@ Student::Student(char* aName, int aAge, char aGender, char* aDesignation, char* 
 // end Student constructor 
 
 // Student Copy Constructor
-Student::Student(const Student& rhs) : Person(rhs.GetName(), rhs.GetAge(), rhs.GetGender(), rhs.mDesignation), mStudyYear(rhs.GetStudyYear()) {
+Student::Student(const Student& rhs) : Person(rhs.GetPerson()), mStudyYear(rhs.GetStudyYear()) {
 	this->SetStudent(rhs.GetStudyYear(), rhs.GetProgram());
 	this->SetDesignation(rhs.mDesignation);
 }
@@ -33,7 +33,7 @@ Student::~Student() {
 
 // Student assignment operator.
 Student& Student:: operator =(const Student& rhs) {
-	this->SetStudent(rhs.GetName(), rhs.GetAge(), rhs.GetGender(), rhs.GetProgram(), rhs.GetStudyYear());
+	this->SetStudent(rhs.GetStudent());
 	this->SetDesignation(rhs.mDesignation);
 	return *this;
 }
@@ -88,7 +88,7 @@ void Student::SetStudyYear(int aStudyYear) {
 // Pure virtual function that sets designation in (Parent)Person class
 void Student::SetDesignation(char* aDesignation) {
 	if (aDesignation == NULL);
-	else if (!(strcmp(aDesignation, "student")==0 || strcmp(aDesignation, "Student") == 0))
+	else if (!(strcmp(aDesignation, "student") == 0 || strcmp(aDesignation, "Student") == 0))
 		cout << "Invalid designation entered. Setting it to Student." << endl;
 	// freeing the previously alloted memory
 	if (this->mDesignation)
@@ -116,7 +116,8 @@ void Student::SetStudent(int aStudyYear, char* aProgram) {
 
 // overloaded function that sets the Student
 void Student::SetStudent(const Student& aStudent) {
-	this->SetStudent(aStudent.GetName(), aStudent.GetAge(), aStudent.GetGender(), aStudent.GetProgram(), aStudent.GetStudyYear());
+	this->SetPerson(aStudent.GetPerson());
+	this->SetStudent(aStudent.GetStudyYear(), aStudent.GetProgram());
 }
 // end function SetStudent
 
