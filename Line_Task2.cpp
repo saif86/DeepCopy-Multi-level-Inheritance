@@ -62,7 +62,8 @@ void Line::SetLine(float aLength) {
 
 // overloaded function that sets the Line
 void Line::SetLine(const Line& aLine) {
-	this->SetLine(aLine.GetColor(), aLine.GetCoord(), aLine.GetLength());
+	this->SetShape(aLine.GetShape());
+	this->SetLine(aLine.GetLength());
 }
 // end function SetLine
 
